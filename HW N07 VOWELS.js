@@ -78,3 +78,39 @@ function vowelsInText (txt) {
     return vowelsCount;
 }
 */
+/*
+Variant 5
+function textVowels(txt) {
+    function textVowelsCount(v) {
+        var vowels = 'аеёиоуыэюя';
+        return vowels.indexOf(v) != -1;
+    };
+    return txt.toLowerCase().split('').filter(textVowelsCount).length;
+}
+*/
+/*
+Variant 6
+function textVowels(txt) {
+    function textVowelsCount(sum, v) {
+        var vowels = 'аеёиоуыэюя';
+        if (vowels.indexOf(v) != -1){
+            return sum + 1;
+        }
+        return sum;
+    }
+    return txt.toLowerCase().split('').reduce(textVowelsCount, 0);
+}
+*/
+/*
+Variant 7
+function textVowels(txt) {
+    var sum = 0;	
+    function textVowelsCount(v) {
+        var vowels = 'аеёиоуыэюя';
+        if (vowels.indexOf(v) != -1)
+            sum++;
+    }
+    txt.toLowerCase().split('').forEach(textVowelsCount);
+    return sum;
+}
+*/
