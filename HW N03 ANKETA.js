@@ -16,17 +16,16 @@
 Оператор alert в коде должен использоваться ровно один раз.*/
 
 /*рассматривает строку как массив, каждый элемент - символ - имеет индекс(номер), поскольку в данном случае достаточно найти хотя бы 1 цифру в строке, функция пробегается по каждому символу, и когда находит цифру, возвращает ее как элемент массива*/
-function numInString(x){
-    for (var index in x){
-        if(parseInt(x[index])){
+function numInString(x) {
+    for (var index in x) {
+        if(parseInt(x[index]))
             return x[index];
-        };
     };
 };
 /*нажали отмена (null)||ввели число||не ввели ничего (isNaN по правилам Number : '' и null в 0)|| (или isFinite() или isNaN(ln) == false или !y)*/
-function question (q){
+function question (q) {
     var y = prompt(q);
-    while(!isNaN(y)||!isNaN(numInString(y))){
+    while(!isNaN(y)||!isNaN(numInString(y))) {
         alert ('Вы оставили поле пустым/ нажали кнопку "Отмена"/ ввели число. Эти значения недопустимы. Повторите попытку!');
         y = prompt(q);
         };
@@ -37,7 +36,7 @@ var ln = question ('Введите фамилию');
 var pc = question ('Введите отчество');
 
 var ys = parseFloat(prompt('Сколько Вам лет?'));
-while((ys < 0)||(ys == '')||(ys == null)||isNaN(ys)){
+while((ys < 0)||(ys == '')||(ys == null)||isNaN(ys)) {
     alert ('Вы оставили поле пустым/ нажали кнопку "Отмена"/ ввели текст или отрицательное число. Эти значения недопустимы. Повторите попытку!');
     ys = parseFloat(prompt('Сколько Вам лет?'));
 };
@@ -45,12 +44,20 @@ while((ys < 0)||(ys == '')||(ys == null)||isNaN(ys)){
 
 var gr = confirm('Ваш пол мужской? Если ДА, нажмите кнопку ОК, иначе нажмите ОТМЕНА');	
 
-function gender (){
-    if(gr == true){return 'Мужской';} else {return 'Женский'};
+function gender () {
+    if(gr == true)
+        return 'Мужской';
+    else
+        return 'Женский';
 };
 
-function ret (){
-    if(gr == true && ys >= 61){return 'Да'} else if (gr == false && ys >= 56){return 'Да'}else{return 'Нет'};
+function ret () {
+    if(gr == true && ys >= 61) 
+        return 'Да';
+    else if (gr == false && ys >= 56) 
+        return 'Да';
+    else
+        return 'Нет';
 };
 
 alert (`Ваше ФИО: ${fn} ${ln} ${pc}\nВаш возраст в годах: ${ys}\nВаш возраст в днях: ${ys*365}\nЧерез 5 лет Вам будет: ${ys+5}\nВаш пол: ${gender()}\nВы на пенсии: ${ret()}`);
