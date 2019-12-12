@@ -1,0 +1,26 @@
+body{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+h1{
+	margin: 50px auto;
+	text-align: center;
+}
+input,textarea{
+	display: block;
+	margin: 20px auto;
+}
+input[type='button']{
+	width: 300px;
+	height: 35px;
+	border-radius: 20px;
+	border-style: none;
+	background-color: #5eb270;
+}
+textarea{
+	width: 80%;
+	height: 200px;
+	padding: 20px;
+	padding-top: 20px;
+	text-align: justify;
+}
