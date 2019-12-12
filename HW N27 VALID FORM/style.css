@@ -1,0 +1,41 @@
+body{
+	width: 1200px;
+}
+form{
+	width: 1200px;
+	margin: 0 auto;
+}
+p{
+	margin-top: 10px;
+	margin-bottom: 3px;
+	vertical-align: baseline;
+}
+span{
+	display: inline-flex;
+	width: 40%;
+	color: red;
+}
+label{
+	display: inline-block;
+	width: 20%;
+}
+.longtext{
+	width: 35%;
+	padding-left: 5px;
+}
+.shorttext{
+	width: 35%;
+	padding-left: 5px;
+}
+.number{
+	width: 12%;
+	padding-left: 5px;
+}
+.combo{
+	width: 35.9%;
+	padding-left: 5px;
+}
+textarea{	
+	width: 55.6%;
+	height: 50px;
+}

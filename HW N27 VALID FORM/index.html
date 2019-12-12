@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>N.27.VALID_FORM</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	
+</head>
+<body>
+	<p>	Для внесения вашего сайта в каталог, заполните форму:</p><br>
+	<form name="form0" action="http://fe.it-academy.by/TestForm.php" method="post" id="form0" novalidate>
+		<p>
+			<label for="developers">Разработчики:</label>
+			<input type="text" name="developers" id="developers" class="longtext">
+			<span id='developersErr'></span>
+		</p>
+		<p>
+			<label for="sitename">Название сайта:</label>
+			<input type="text" name="sitename" id="sitename" class="longtext">
+			<span id='sitenameErr'></span>
+		</p>
+		<p>
+			<label for="siteurl">URL сайта:</label>
+			<input type="text" name="siteurl" id="siteurl" class="longtext">
+			<span id='siteurlErr'></span>
+		</p>
+		<p>
+			<label for="launchdate">Дата запуска сайта:</label>
+			<input type="text" name="launchdate" id="launchdate" class="number">
+			<span id='launchdateErr'></span>
+		</p>
+		<p>
+			<label for="visitors">Посетителей в сутки:</label>
+			<input type="text" name="visitors" id="visitors" class="number">
+			<span id='visitorsErr'></span>
+		</p>
+		<p>
+			<label for="email">E-mail для связи:</label>
+			<input type="text" name="email" id="email" class="shorttext">
+			<span id='emailErr'></span>
+		</p>
+		<p>
+			<label for="division">Рубрика каталога:</label>
+			<select name="division" id="division" class="combo">
+				<option value=''></option>
+				<option value=1>здоровье</option>
+				<option value=2>домашний уют</option>
+				<option value=3>бытовая техника</option>
+			</select>
+			<span id='divisionErr'></span>
+		</p>
+		<p>
+			<label>Размещение:</label>
+			<input type="radio" value=1 name="payment" id="payment1">бесплатное
+			<input type="radio" value=2 name="payment">платное
+			<input type="radio" value=3 name="payment">VIP
+			<span id='paymentErr'></span>
+		</p>
+		<p>
+			<label for="votes">Разрешить отзывы:</label>
+			<input type="checkbox" name="votes" id="votes" class="check">
+			<span id='votesErr'></span>
+		</p>
+		<p>
+			<label for="description">Описание сайта:</label><br>
+			<textarea name="description" id="description" class="memo"></textarea>
+			<span id='descriptionErr'></span>
+		</p>
+		<p>
+			<input type="submit" value="Опубликовать" id="submit">
+		</p>
+	</form>
+	<script src="script.js"></script>	
+</body>
+</html>
